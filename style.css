@@ -1,0 +1,151 @@
+/*
+ * Globals
+ */
+
+
+/* Custom default button */
+.btn-light,
+.btn-light:hover,
+.btn-light:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+body {
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+ 
+  background:  url(img/bg.jpg);
+  
+  background-position: center;
+  
+}
+
+.cover-container {
+ width: 100%; /* Set the width as needed */
+  max-width: 800px; /* Set a maximum width if desired */
+  margin: 0 auto; /* Center the container horizontally */
+  
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  
+
+  background-size: cover;
+  background-position: center;
+ 
+  position: relative;
+    
+  
+}
+
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+  color: rgba(255, 255, 255, .5);
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+
+/* Media query for smaller screens (phones) */
+@media (max-width: 768px) {
+  .cover-container {
+    width: 100%; /* Expand to full width of the viewport */
+    border: none; /* Remove the border for mobile view */
+    box-shadow: none; /* Remove the box shadow for mobile view */
+  }
+}
+
+
+
+/* Container IMAGES */
+
+/* Style for the slideshow container */
+
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  animation: slideshow 21s infinite;
+  opacity: 0;
+  transform: scale(1);
+}
+
+/* Keyframes for the slideshow animation */
+@keyframes slideshow {
+  0%, 14.28% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  16%, 28.28% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  85.72%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+.slide:nth-child(1) {
+  background-image: url('img/container-img/img1.jpg');
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  background-image: url('img/container-img/img2.jpg');
+  animation-delay: 3s; /* 3s delay for the second image (total 3s + 3s) */
+}
+
+.slide:nth-child(3) {
+  background-image: url('img/container-img/img3.jpg');
+  animation-delay: 6s; /* 6s delay for the third image (total 3s + 6s) */
+}
+
+.slide:nth-child(4) {
+  background-image: url('img/container-img/img4.jpg');
+  animation-delay: 9s; /* 9s delay for the fourth image (total 3s + 9s) */
+}
+/* Add more slides with appropriate animation delays if needed */
+
+.text-overlay {
+ 
+  z-index: 1;
+  overflow-y: scroll; /* Add this property to enable scrolling */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px; /* Add padding as needed */
+}
