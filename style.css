@@ -22,7 +22,7 @@ body {
   background:  url(img/bg.jpg);
   
   background-position: center;
-  
+  overflow:hidden;
 }
 
 .cover-container {
@@ -148,4 +148,100 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px; /* Add padding as needed */
+   
+}
+
+.bi {
+  font-family: 'Bootstrap Icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+
+
+form .form-field label{
+	display:block;
+}
+
+form .form-field #full_name, 
+form .form-field select#guests, 
+form .form-field #message,
+form .form-field #npersons 
+{
+	width: 90%;
+	margin: 0 auto;
+	height: 60px;
+	border: 2px solid #fff;
+	/*background: rgba(255,255,255,0.1);*/
+	background: rgba(72, 72, 72, 0.4);
+	border-radius: 5px;
+	color: #fff;
+	font-size: 18px;
+	padding: 0 15px;
+}
+
+
+
+
+form .form-field select#guests option{ color:#000;}
+form .form-field label {
+	display: block;
+	margin-bottom: 7px;
+	font-size: 22px;
+}
+form .form-field.fld-name{
+	margin-bottom:42px;
+	
+}
+form .form-field.fld-npersons {
+	margin-top: 42px;
+}
+form button#submit_rsvp {
+	width: 90%;
+	border: none;
+	border-radius: 5px;
+	height: 60px;
+	margin-top: 42px;
+	background: #000;
+	color: #fff;
+	font-size: 22px;
+	box-shadow: 0px 0px 8px 0px #f3f3f3;
+	cursor:pointer;
+	position:relative;
+}
+
+.form-intro-wrapper {
+	font-size: 18px;
+	padding: 3px 10px;
+	margin-bottom: 8%;
+}
+.form-intro-wrapper dd.npersons_cont {
+	font-size: 14px;
+	text-align: center;
+	display: block;
+	margin: 0;
+	padding-top: 7px;
+	font-style: oblique;
+}
+
+form .form-field{
+	position:relative;
+	
+}
+form .form-field .fld_error {
+	color: #d70926;
+	font-size: 12px;
+	position: absolute;
+	width: 100%;
+	bottom: -17px;
+	font-family: arial;
+}
+
+form .form-field input#full_name.error_input,
+form .form-field select#guests.error_input,
+form .form-field input#npersons.error_input{
+	border-color:#d70926;	
 }
